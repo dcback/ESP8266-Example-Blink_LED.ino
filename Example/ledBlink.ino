@@ -1,4 +1,4 @@
-#define ledPin  2   // 2 == GPIO2
+#define ledPin  2   // 2 == GPIO4
 unsigned int cnt;
  
 void setup() {
