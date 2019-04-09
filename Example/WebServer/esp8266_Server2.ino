@@ -110,8 +110,7 @@ void loop(){
 
   if ( curMillis - preMillis >= 1000 ) {  // delay(1000);
       preMillis = curMillis;
-      if (ledState == LOW) ledState = HIGH;
-      else ledState = LOW;
+      ledState = !ledState;
       digitalWrite(ledPin, ledState);
       Serial.print(ledState);
   }
