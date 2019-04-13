@@ -18,16 +18,17 @@ String getPage() {
     page +=       "<h1>Demo Webserver ESP8266 + Bootstrap</h1>";
     page +=       "<h3>Sensing & Control Mini station </h3>";
     page +=       "<ul class='nav nav-pills'>";
-    page +=         "<li class='active'>";
-    page +=           "<a href='#'> <span class='badge pull-right'>22 &deg;C</span> Temperature</a>";   // &deg; -> °  
-    page +=         "</li>";
-    page +=         "<li class='active'>";
-    page +=           "<a href='#'> <span class='badge pull-right'>33 %</span> Humidity</a>";
-    page +=         "</li>";
-    page +=         "<li class='active'>";
-    page +=           "<a href='#'> <span class='badge pull-right'>1000 ppm</span> Value of CO2</a>";
-    page +=           "</li>";
+    page +=             "<li class='active'>";
+    page +=             "<a href='#'> <span class='badge pull-right'>22 &deg;C</span> Temperature</a>";   // &deg; -> °  
+    page +=             "</li>";
+    page +=             "<li class='active'>";
+    page +=             "<a href='#'> <span class='badge pull-right'>33 %</span> Humidity</a>";
+    page +=             "</li>";
+    page +=             "<li class='active'>";
+    page +=             "<a href='#'> <span class='badge pull-right'>1000 ppm</span> Value of CO2</a>";
+    page +=             "</li>";
     page +=       "</ul>";
+    page +=     "<br><a href='https://github.com/dcback/ESP8266/blob/master/Example/WebServer/Test/esp8266_Server_test01.ino' target='_blank'>GithubLink</p>";
     page += "</div></div></div>";
     page += "</body></html>";
     return page;
