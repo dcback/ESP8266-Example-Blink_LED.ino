@@ -16,7 +16,7 @@ String getPage() {
     page +=   "<div class='row'>";
     page +=     "<div class='col-md-12'>";
     page +=       "<h1>Demo Webserver ESP8266 + Bootstrap</h1>";
-    page +=       "<h3>Sensoring & Conntrol Mini station </h3>";
+    page +=       "<h3>Sensing & Control Mini station </h3>";
     page +=       "<ul class='nav nav-pills'>";
     page +=         "<li class='active'>";
     page +=           "<a href='#'> <span class='badge pull-right'>22 &deg;C</span> Temperature</a>";   // &deg; -> °  
@@ -61,7 +61,6 @@ void setup() {
 
     server.begin();
     Serial.println ( "HTTP server started" );
-
 }
 
 void loop() {
