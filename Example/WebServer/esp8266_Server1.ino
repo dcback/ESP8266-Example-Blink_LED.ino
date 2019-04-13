@@ -15,8 +15,8 @@ String output5State = "off";
 String output4State = "off";
 
 // Assign output variables to GPIO pins
-const int output5 = 2;      // default 5
-const int output4 = 4;
+const int output5 = D5;     // GPIO 14
+const int output4 = D4;     // GPIO 2      
 
 void setup() {
     Serial.begin(115200);
