@@ -28,15 +28,20 @@ String getPage() {
     page +=         "<li class='active'>";
     page +=           "<a href='#'> <span class='badge pull-right'>";
     page +=           tempValue;
+    page +=           " &deg;C";
     page +=           "</span> Temperature</a>";
-    page +=         "</li><li>";
+    page +=         "</li>";
+    page +=         "<li class='active'>";
     page +=           "<a href='#'> <span class='badge pull-right'>";
     page +=           humiValue;
+    page +=           " %";
     page +=           "</span> Humidity</a>";
-    page +=         "</li><li>";
+    page +=         "</li>";
+    page +=         "<li class='active'>";
     page +=           "<a href='#'> <span class='badge pull-right'>";
     page +=           co2Value;
-    page +=           "</span> CO2</a></li>";
+    page +=           " ppm";
+    page +=           "</span> Value of CO2</a></li>";
     page +=       "</ul>";
     page +=       "<table class='table'>";  // Table of readings
     page +=         "<thead><tr><th>Sensor</th><th>Measure</th><th>Value</th><th>Previous Value</th></tr></thead>"; // Head
