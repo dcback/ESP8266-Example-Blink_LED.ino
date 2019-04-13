@@ -86,7 +86,7 @@ String getPage() {
     page +=         "<div class='col-md-4'><form action='/' method='POST'><button type='button submit' name='D7' value='1' class='btn btn-success btn-lg'>ON</button></form></div>";
     page +=         "<div class='col-md-4'><form action='/' method='POST'><button type='button submit' name='D7' value='0' class='btn btn-danger btn-lg'>OFF</button></form></div>";
     page +=       "</div>";
-    page +=     "<br><p><a href='http://www.analoglab.com' target='_blank'>www.analoglab.com</p>";
+    page +=     "<p><a href='https://github.com/dcback/ESP8266/blob/master/Example/WebServer/esp8266_Server4.ino' target='_blank'>GithubLink</p>";
     page += "</div></div></div>";
     page += "</body></html>";
     return page;
@@ -164,7 +164,6 @@ void setup() {
 
     server.begin();
     Serial.println ( "HTTP server started" );
-
 }
 
 void loop() {
