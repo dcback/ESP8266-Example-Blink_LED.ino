@@ -146,6 +146,7 @@ void updateGPIO(int gpio, String DxValue) {
 void setup() {
     for ( int x = 0 ; x < 5 ; x++ ) {
         pinMode(GPIOPIN[x], OUTPUT);
+        digitalWrite(GPIOPIN[x], HIGH); // HIGH = OFF, LOW = ON
     }
     Serial.begin ( 115200 );
 
