@@ -1,4 +1,4 @@
-// 온도 모니터링 웝서버(AP mode : 외부 인터넷 연결없이 Local WiFi Networking)
+// 온도 모니터링 웹서버(AP mode : 외부 인터넷 연결없이 Local WiFi Networking)
 
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
