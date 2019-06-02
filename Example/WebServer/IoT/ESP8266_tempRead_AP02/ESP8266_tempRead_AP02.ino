@@ -1,5 +1,3 @@
-// 온도 모니터링 웹서버(AP mode : 외부 인터넷 연결없이 Local WiFi Networking)
-
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
@@ -11,9 +9,8 @@ const char* ssid = "ESPWebserver";
 const char* password = "12345678";
 
 ESP8266WebServer server(80);    // Server on port 80
-
 //===================================================================
-// IP(192.168.x.x)에 접속 후 열릴때 아래 루틴 실행
+// This routine is executed when you open its IP in browser
 //===================================================================
 void handleRoot() {
     String s = MAIN_page;
