@@ -11,9 +11,8 @@ const char* ssid = "ESPWebserver";
 const char* password = "12345678";
 
 ESP8266WebServer server(80);    // Server on port 80
-
 //===================================================================
-// IP(192.168.x.x)에 접속 후 열릴때 아래 루틴 실행
+// This routine is executed when you open its IP in browser
 //===================================================================
 void handleRoot() {
     String s = MAIN_page;
