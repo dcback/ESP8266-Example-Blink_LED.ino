@@ -8,13 +8,13 @@ const char *password = "1700note"; // "your password"
 
 ESP8266WebServer server(80); // Server on port 80
 //===================================================================
-// IP(192.168.x.x)에 접속 후 루틴 실행
+// This routine is executed when you open its IP in browser
 //===================================================================
 void handleRoot() {
     server.send(200, "text/plain", "Hello world.. esp8266!");
 }
 //=====================================================================
-//              SETUP
+//                              SETUP
 //=====================================================================
 void setup(void) {
     Serial.begin(115200);
