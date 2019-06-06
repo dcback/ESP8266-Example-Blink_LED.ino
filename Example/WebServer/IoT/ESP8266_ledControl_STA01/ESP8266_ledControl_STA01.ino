@@ -7,7 +7,7 @@
 String LED_state = "OFF";
 
 //SSID and Password of your WiFi router
-const char *ssid = "BackhomenetAP";
+const char *ssid = "Backhomenet";
 const char *password = "1700note";
 
 ESP8266WebServer server(80);        // Server on port 80
