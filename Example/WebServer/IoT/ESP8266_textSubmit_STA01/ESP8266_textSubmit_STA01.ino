@@ -15,18 +15,19 @@ ESP8266WebServer server(80);        // Server on port 80
 // This routine is executed when you open its IP in browser
 //===================================================================
 void handleRoot() {
-    String s = MAIN_page;
-
+    String s = MAIN_page; 
+    
     // LED_state문자열을 HTML의 @@status@@ 변수로 바꾼다
     s.replace("@@value@@", conVal);
     server.send(200, "text/html", s);   // 브라우저에 웹 페이지를 보낸다
 }
 //=====================================================================
-// This rutine is exicuted when we press ON/OFF button i.e. form
+// This routine is executed when we press ON/OFF button i.e. form
 //=====================================================================
 void handleForm() {
-    conVal = server.arg("conValue");      //Get conValue
-
+    conVal = server.arg("conValue");    //Get conValue
+    Serial.println(conVal);
+    
     server.sendHeader("Location", "/"); //Send web browser to root location
     server.send(302, "text/html", "");  //Send browser 302 redirect go back to root location
 }
@@ -61,5 +62,4 @@ void setup() {
 //===================================================================
 void loop() {
     server.handleClient();     //handle client request
-    Serial.println(conVal);
 }
