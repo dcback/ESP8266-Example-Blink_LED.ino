@@ -15,9 +15,9 @@ const char htmlPage3[] PROGMEM = R"=====(
         <h1>nodeMCU Web Server</h1>
         <p style="color:blue;">nodeMCU multiPage Web Server - Page3.</p>
         <p>
-            <a class="btn btn-primary" href="/" role="button">nodeMCU site Link</a>
-            <a class="btn btn-success" href="/page2" role="button">nodeMCU webPage</a>
-            <a class="btn btn-danger disabled" href="/page3" role="button">nodeMCU IoT WebServer</a>
+            <a class="btn btn-primary" href="/" role="button">Site Link</a>
+            <a class="btn btn-success" href="/page2" role="button">WebPage</a>
+            <a class="btn btn-danger disabled" href="/page3" role="button">IoT WebServer</a>
         </p>
         <div class='row'>
             <div class='col-md-12'>
@@ -30,7 +30,8 @@ const char htmlPage3[] PROGMEM = R"=====(
                         <a href='#'> <span class='badge pull-right'>40 %</span> Humidity</a>
                     </li>
                     <li class='active'>
-                        <a href='#'> <span class='badge pull-right'>450 ppm</span> Value of CO2</a></li>
+                        <a href='#'> <span class='badge pull-right'>450 ppm</span> CO2</a>
+                    </li>
                 </ul>
                 <table class='table'>
                     <thead>
@@ -64,47 +65,47 @@ const char htmlPage3[] PROGMEM = R"=====(
                 </table>
                 <h3>GPIO</h3>
                 <div class='row'>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <h4 class='text-left'>D4<span class='badge'>ON</span></h4>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D4' value='1'
                                 class='btn btn-success btn-lg'>ON</button></form>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D4' value='0'
                                 class='btn btn-danger btn-lg'>OFF</button></form>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <h4 class='text-left'>D5<span class='badge'>OFF</span></h4>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D5' value='1'
                                 class='btn btn-success btn-lg'>ON</button></form>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D5' value='0'
                                 class='btn btn-danger btn-lg'>OFF</button></form>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <h4 class='text-left'>D6<span class='badge'>OFF</span></h4>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D6' value='1'
                                 class='btn btn-success btn-lg'>ON</button></form>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D6' value='0'
                                 class='btn btn-danger btn-lg'>OFF</button></form>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <h4 class='text-left'>D7<span class='badge'>OFF</span></h4>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D7' value='1'
                                 class='btn btn-success btn-lg'>ON</button></form>
                     </div>
-                    <div class='col-md-4'>
+                    <div class='col-xs-4'>
                         <form action='/' method='POST'><button type='button submit' name='D7' value='0'
                                 class='btn btn-danger btn-lg'>OFF</button></form>
                     </div>
