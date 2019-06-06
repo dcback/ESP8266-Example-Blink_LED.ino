@@ -15,9 +15,9 @@ const char htmlPage2[] PROGMEM = R"=====(
         <h1>nodeMCU Web Page</h1>
         <p style="color:blue;">nodeMCU multiPage Web Server - Page2.</p>
         <p>
-            <a class="btn btn-primary" href="/" role="button">nodeMCU site Link</a>
-            <a class="btn btn-success disabled" href="/page2" role="button">nodeMCU webPage</a>
-            <a class="btn btn-danger" href="/page3" role="button">nodeMCU IoT WebServer</a>
+            <a class="btn btn-primary" href="/" role="button">Site Link</a>
+            <a class="btn btn-success disabled" href="/page2" role="button">WebPage</a>
+            <a class="btn btn-danger" href="/page3" role="button">IoT WebServer</a>
         </p>
 
         <h1>[H1] 이 가장 큰 문자 Size입니다.</h1>
