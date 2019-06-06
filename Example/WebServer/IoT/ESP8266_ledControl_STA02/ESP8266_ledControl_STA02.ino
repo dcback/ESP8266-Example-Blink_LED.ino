@@ -79,7 +79,7 @@ void setup() {
     pinMode(LED1, OUTPUT);
     pinMode(LED2, OUTPUT);
     digitalWrite(LED1, HIGH);        //LED1 Off State
-    digitalWrite(LED1, HIGH);        //LED2 Off State
+    digitalWrite(LED2, HIGH);        //LED2 Off State
 
     server.on("/", handleRoot);         //Which routine to handle at root location
     server.on("/form1", handleForm1);   //These request sent when we click on button
