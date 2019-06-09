@@ -25,7 +25,7 @@ const char MAIN_page[] PROGMEM = R"=====(
             }
 
             setInterval(function () {
-                // Call a function repetatively with 1 Second interval
+                // Call a function repeatedly with 1 Second interval
                 getData();
             }, 1000); //1000mSeconds update rate
         </script>
