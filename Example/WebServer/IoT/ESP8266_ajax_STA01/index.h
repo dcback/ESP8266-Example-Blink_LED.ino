@@ -8,7 +8,7 @@ const char MAIN_page[] PROGMEM = R"=====(
             <h4>ESP8266 nodeMCU Update Webpage without refresh</h4>
         </div>
         <div style="color:gray;">
-            <b>ADC Value is : <span id="sen1Value" style="color:red">0</span></b><br>
+            <b>SENSOR1 Value is : <span id="sen1Value" style="color:red">0</span></b><br>
         </div>
 
         <script>
