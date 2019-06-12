@@ -5,7 +5,7 @@ const char MAIN_page[] PROGMEM = R"=====(
 <body>
     <center>
         <div>
-            <h4>ESP8266 nodeMCU Update Webpage without refresh</h4>
+            <h3>nodeMCU Gauge without Refresh</h3>
         </div>
         <div style="color:gray;">
             <b>SENSOR1 Value is : <span id="sen1Value" style="color:red">0</span></b><br>
