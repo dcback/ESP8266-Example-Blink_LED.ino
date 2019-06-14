@@ -21,6 +21,7 @@ const char MAIN_page[] PROGMEM = R"=====(
             <b>밝기 : <span id="brightVal" style="color:red">0</span></b>
         </div>
         <div id="chart_div" style="width: 600px; height: 180px;"></div>
+        <div>
             <b>Variable1 : <span id="Var1" style="color:green">0</span></b>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <b>Variable2 : <span id="Var2" style="color:green">0</span></b>
@@ -33,9 +34,9 @@ const char MAIN_page[] PROGMEM = R"=====(
 </body>
 
 <script>
-    var temp;  // Global variable
-    var humi;  // Global variable
-    var bright;  // Global variable
+    var temp;   // Global variable
+    var humi;   // Global variable
+    var bright; // Global variable
 
     function getData1() {
         var xhttp = new XMLHttpRequest();
