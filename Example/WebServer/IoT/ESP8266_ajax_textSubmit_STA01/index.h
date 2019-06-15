@@ -31,7 +31,7 @@ const char MAIN_page[] PROGMEM = R"=====(
 
         </script>
         <h5>Designed by ORY (C) 2019 <a
-                href="https://github.com/dcback/ESP8266/tree/master/Example/WebServer/IoT/ESP8266_ajax_STA03">GithubLink.</a>
+                href="https://github.com/dcback/ESP8266/tree/master/Example/WebServer/IoT/ESP8266_ajax_textSubmit_STA01">GithubLink.</a>
     </center>
 </body>
 
