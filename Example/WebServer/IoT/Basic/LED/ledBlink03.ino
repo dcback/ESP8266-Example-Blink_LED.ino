@@ -9,7 +9,7 @@ void setup() {
 
 void loop() {
     digitalWrite(ledPin, HIGH); // GPIO2(D4) 핀 출력을 HIGH
-    delay(500);                 // 5000ms(5초) 지연(유지)
+    delay(500);                 // 500ms(0.5초) 지연(유지)
     digitalWrite(ledPin, LOW);  // GPIO2(D4) 핀 출력을 LOW
-    delay(500);                 // 5000ms(5초) 지연(유지)
+    delay(500);                 // 500ms(0.5초) 지연(유지)
 }
