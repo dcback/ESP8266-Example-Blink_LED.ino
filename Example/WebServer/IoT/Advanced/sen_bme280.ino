@@ -4,18 +4,18 @@
     SDA      A4        PB7     D2(GPIO4)
     SCL      A5        PB6     D1(GPIO5)
 *******************************************/
-#include <Wire.h>
-#include <Adafruit_Sensor.h>
-#include <Adafruit_BME280.h>
+#include <Wire.h>               // I2C 사용
+#include <Adafruit_Sensor.h>    // BME280 Library
+#include <Adafruit_BME280.h>    // BME280 Library
 
-#define SEALEVELPRESSURE_HPA (1013.25)
+#define SEALEVELPRESSURE_HPA (1013.25)  // 고도 계산에 필요한 변수(해수면 압력)정의 
 
-Adafruit_BME280 bme;
+Adafruit_BME280 bme;  // BME280 Function -> bme로 정의
 
 void setup() {
     Serial.begin(115200);
 
-    if (!bme.begin(0x76)) {
+    if (!bme.begin(0x76)) {     // BME280(I2C addr=0x76) begin
         Serial.println("Could not find a valid BME280 sensor, check wiring!");
         while (1);
     }
@@ -23,19 +23,19 @@ void setup() {
 
 void loop() {
     Serial.print("Temperature = ");
-    Serial.print(bme.readTemperature());
+    Serial.print(bme.readTemperature());    // 온도 값 가져와서 출력
     Serial.println("*C");
 
     Serial.print("Humidity = ");
-    Serial.print(bme.readHumidity());
+    Serial.print(bme.readHumidity());       // 습도 값 가져와서 출력
     Serial.println("%");
 
     Serial.print("Pressure = ");
-    Serial.print(bme.readPressure() / 100.0F);
+    Serial.print(bme.readPressure() / 100.0F);  // 기압 값 가져와서 출력
     Serial.println("hPa");
 
     Serial.print("Approx. Altitude = ");
-    Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA));
+    Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA)); // 고도 값 가져와서 출력
     Serial.println("m");
 
     Serial.println();
