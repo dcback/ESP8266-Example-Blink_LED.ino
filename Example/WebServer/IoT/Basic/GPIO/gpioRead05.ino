@@ -8,8 +8,7 @@ void setup() {
 }
 
 void loop() {
-    readVal_A0 = analogRead(A0);        // A0 핀 읽기
-    
+    readVal_A0 = analogRead(A0);        // A0 핀 읽기    
     analogWrite(ledPin, readVal_A0);    // LED PWM Control
     
     // 시리얼 모니터 출력
