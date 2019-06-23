@@ -1,7 +1,7 @@
 // ctrlPin(D3) LOW/HIGH 제어 -> Serial Monitor
 
 int ctrlPin = D3;     // ctrlPin을 D3로 정의
-int ledPin  = D4;     // cledPin을 D4로 정의
+int ledPin  = D4;     // ledPin을 D4로 정의
 int ctrlValue;        // ctrlValue를 정수변수로 정의  
 
 void setup() {
