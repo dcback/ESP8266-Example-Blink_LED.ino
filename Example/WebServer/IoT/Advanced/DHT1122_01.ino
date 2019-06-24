@@ -1,13 +1,13 @@
-// Vcc = 3.3V, DTH11(D3). DHT22(D4)
+// Vcc = 3.3V, DTH11(D4). DHT22(D3)
 #include "DHT.h"
 
 //DHT11
-#define DHTPIN11 D3         // what pin we're connected to
+#define DHTPIN11 D4         // what pin we're connected to
 #define DHTTYPE11 DHT11     // DHT 11
 DHT dht11(DHTPIN11, DHTTYPE11);
 
 //DHT22
-#define DHTPIN22 D4         // what pin we're connected to
+#define DHTPIN22 D3         // what pin we're connected to
 #define DHTTYPE22 DHT22     // DHT 22
 DHT dht22(DHTPIN22, DHTTYPE22);
 
