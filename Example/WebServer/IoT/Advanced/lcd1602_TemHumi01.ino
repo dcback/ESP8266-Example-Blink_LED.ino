@@ -16,15 +16,9 @@ LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address(I2C) to 0x27
 #define DHTTYPE11 DHT11     // DHT 11
 DHT dht11(DHTPIN11, DHTTYPE11);
 
-//DHT22
-#define DHTPIN22 D3         // what pin we're connected to
-#define DHTTYPE22 DHT22     // DHT 22
-DHT dht22(DHTPIN22, DHTTYPE22);
-
 void setup() {
     Serial.begin(115200);
     dht11.begin();
-    dht22.begin();
 
     lcd.begin();        // LCD initialize
     lcd.backlight();    // Backlight on
