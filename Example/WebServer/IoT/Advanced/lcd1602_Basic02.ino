@@ -18,12 +18,12 @@ void loop() {
     int humiVal = random(50, 80);
     
     // LCD1602_I2C Display
-    lcd.clear();
-    lcd.setCursor(0, 0);
+    lcd.clear();        // Clears screen & cursor at upper-left corner.
+    lcd.setCursor(0, 0);    // cursor at x=0, y=0 position
     lcd.print("Temperature:"); lcd.print(tempVal);
     lcd.print(" C"); 
 
-    lcd.setCursor(0, 1);
+    lcd.setCursor(0, 1);    // cursor at x=0, y=1 position
     lcd.print("Humidity:"); lcd.print(humiVal); 
     lcd.print(" %"); 
     
