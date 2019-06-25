@@ -2,7 +2,6 @@
     I2C    Arduino  STM32F103  ESP8266
     SDA      A4        PB7     D2(GPIO4)
     SCL      A5        PB6     D1(GPIO5)
-
     HTU21D : VCC(3.3V)
 *******************************************/
 #include <Wire.h>
