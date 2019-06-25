@@ -1,4 +1,4 @@
-// Vcc = 3.3V, DTH11(D4). DHT22(D3)
+// DTH : Vcc(3.3V), DTH11(D4), DHT22(D3)
 #include "DHT.h"
 
 //DHT11
@@ -32,11 +32,6 @@ void loop() {
         return;
     }
 
-    // Compute heat index in Fahrenheit (the default)
-    float hif1 = dht11.computeHeatIndex(f1, humiDHT11);
-    // Compute heat index in Celsius (isFahreheit = false)
-    float hic1 = dht11.computeHeatIndex(tempDHT11, humiDHT11, false);
-
     Serial.print("DHT11 Temperature: ");
     Serial.print(tempDHT11); Serial.print(" *C");
     Serial.print("\t Humidity: ");
@@ -52,11 +47,6 @@ void loop() {
         Serial.println("Failed to read from DHT22 sensor!");
         return;
     }
-
-    // Compute heat index in Fahrenheit (the default)
-    float hif2 = dht11.computeHeatIndex(f2, humiDHT22);
-    // Compute heat index in Celsius (isFahreheit = false)
-    float hic2 = dht11.computeHeatIndex(tempDHT22, humiDHT22, false);
 
     Serial.print("DHT22 Temperature: ");
     Serial.print(tempDHT22); Serial.print(" *C");
