@@ -6,7 +6,7 @@
 TM1637Display dsp(CLK, DIO);
 
 void setup() {
-    dsp.setBrightness(15);       // min(0 ~ max(7)
+    dsp.setBrightness(7);       // min(0 ~ max(7)
 }
 
 void loop() {
