@@ -9,7 +9,7 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16x2 display
 
 void setup() {
-    lcd.begin();        // LCD initialize
+    lcd.inti();        // LCD initialize
     lcd.backlight();    // Backlight on
 
     lcd.print("ABCDEFGHIJKLMNOP");  // ABCDEFGHIJKLMNOP Print
