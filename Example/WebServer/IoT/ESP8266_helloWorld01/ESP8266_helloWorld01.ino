@@ -6,7 +6,7 @@
 const char *ssid = "Backhomenet";  // "your_ssid"
 const char *password = "1700note"; // "your password"
 
-ESP8266WebServer server(80); //Server on port 80
+ESP8266WebServer server(80); // Server on port 80
 //=====================================================================
 // This routine is executed when you open its IP in browser
 //=====================================================================
@@ -20,16 +20,16 @@ void handleRoot()
 void setup(void)
 {
     Serial.begin(115200);
-    WiFi.begin(ssid, password); //Connect to your WiFi router
+    WiFi.begin(ssid, password); // Connect to your WiFi router
 
-    //Wait for connection
+    // Wait for connection
     while (WiFi.status() != WL_CONNECTED)
     {
         delay(500);
         Serial.print(".");
     }
 
-    //If connection successful show IP address in serial monitor
+    // If connection successful show IP address in serial monitor
     Serial.println("");
     Serial.print("Connected to ");
     Serial.println(ssid);
@@ -45,5 +45,5 @@ void setup(void)
 //=====================================================================
 void loop()
 {
-    server.handleClient(); //handle client request
+    server.handleClient(); // handle client request
 }
