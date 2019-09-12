@@ -26,8 +26,6 @@ void handleRoot()
     // int 온도 값을 문자열로 변환 한 다음 HTML의 @@temp@@를 온도 값으로 바꾼다
     s.replace("@@temp@@", String(tempValue));
     server.send(200, "text/html", s);   // 브라우저에 웹 페이지 보낸다
-
-    Serial.println(tempValue);          // 시리얼 모니터링
 }
 //===================================================================
 //                    Power on setup
