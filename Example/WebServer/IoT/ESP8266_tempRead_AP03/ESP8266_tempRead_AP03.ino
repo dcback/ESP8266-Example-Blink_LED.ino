@@ -21,7 +21,7 @@ void handleRoot()
 
     tempValue = 10 + cnt;
     cnt = cnt + 1;
-    if (tempValue == 20) cnt = 0;
+    if (tempValue == 30) cnt = 0;
 
     // int 온도 값을 문자열로 변환 한 다음 HTML의 @@temp@@를 온도 값으로 바꾼다
     s.replace("@@temp@@", String(tempValue));
