@@ -4,7 +4,7 @@
 
 #include "index.h"      // web page
 
-//SSID and Password of your WiFi router
+// SSID and Password of your WiFi router
 const char *ssid = "Backhomenet";  // "your_ssid"
 const char *password = "1700note"; // "your password"
 
@@ -12,7 +12,8 @@ ESP8266WebServer server(80);    // Server on port 80
 //===================================================================
 // This routine is executed when you open its IP in browser
 //===================================================================
-void handleRoot() {
+void handleRoot() 
+{
     String s = MAIN_page;
 
     // read the analog in value
@@ -30,12 +31,14 @@ void handleRoot() {
 //===================================================================
 //                    Power on setup
 //===================================================================
-void setup() {
+void setup() 
+{
     Serial.begin(115200);
     WiFi.begin(ssid, password);    //Connect to your WiFi router
 
     // Wait for connection
-    while (WiFi.status() != WL_CONNECTED) {
+    while (WiFi.status() != WL_CONNECTED) 
+    {
         delay(500);
         Serial.print(".");
     }
@@ -55,6 +58,7 @@ void setup() {
 //===================================================================
 //                        Main Program Loop
 //===================================================================
-void loop() {
+void loop() 
+{
     server.handleClient();     //handle client request
 }
