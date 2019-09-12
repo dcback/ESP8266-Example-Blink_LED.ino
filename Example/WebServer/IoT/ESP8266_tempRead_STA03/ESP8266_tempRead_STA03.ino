@@ -10,17 +10,19 @@ const char *password = "1700note"; // "your password"
 
 ESP8266WebServer server(80);    // Server on port 80
 
+int tempValue;                  // 온도 값 변수
 int cnt = 0;                    // 온도 증가용 변수
 //===================================================================
 // This routine is executed when you open its IP in browser
 //===================================================================
-void handleRoot() {
+void handleRoot() 
+{
     String s = MAIN_page;
 
     int tempValue;
     tempValue = 10 + cnt;
     cnt = cnt + 1;
-    if (cnt == 30) cnt = 0;
+    if (tempValue == 30) cnt = 0;
     
     // int 온도 값을 문자열로 변환 한 다음 HTML의 @@temp@@를 온도 값으로 바꾼다
     s.replace("@@temp@@", String(tempValue));
@@ -29,12 +31,14 @@ void handleRoot() {
 //===================================================================
 //                    Power on setup
 //===================================================================
-void setup() {
+void setup() 
+{
     Serial.begin(115200);
     WiFi.begin(ssid, password);    //Connect to your WiFi router
 
     // Wait for connection
-    while (WiFi.status() != WL_CONNECTED) {
+    while (WiFi.status() != WL_CONNECTED) 
+    {
         delay(500);
         Serial.print(".");
     }
@@ -54,6 +58,7 @@ void setup() {
 //===================================================================
 //                        Main Program Loop
 //===================================================================
-void loop() {
+void loop() 
+{
     server.handleClient();     //handle client request
 }
