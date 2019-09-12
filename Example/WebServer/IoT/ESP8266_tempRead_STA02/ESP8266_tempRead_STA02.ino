@@ -4,7 +4,7 @@
 
 #include "index.h"
 
-//SSID and Password of your WiFi router
+// SSID and Password of your WiFi router
 const char *ssid = "Backhomenet";  // "your_ssid"
 const char *password = "1700note"; // "your password"
 
@@ -27,7 +27,7 @@ void handleRoot() {
 //===================================================================
 void setup() {
     Serial.begin(115200);
-    WiFi.begin(ssid, password);    //Connect to your WiFi router
+    WiFi.begin(ssid, password);    // Connect to your WiFi router
 
     // Wait for connection
     while (WiFi.status() != WL_CONNECTED) {
@@ -35,21 +35,21 @@ void setup() {
         Serial.print(".");
     }
 
-    //If connection successful show IP address in serial monitor
+    // If connection successful show IP address in serial monitor
     Serial.println("");
     Serial.print("Connected to ");
     Serial.println(ssid);
     Serial.print("IP address: ");
-    Serial.println(WiFi.localIP()); //IP address assigned to your ESP
+    Serial.println(WiFi.localIP()); // IP address assigned to your ESP
 
-    server.on("/", handleRoot); //Which routine to handle at root location
+    server.on("/", handleRoot); // Which routine to handle at root location
 
-    server.begin();             //Start server
+    server.begin();             // Start server
     Serial.println("HTTP server started");
 }
 //===================================================================
 //                        Main Program Loop
 //===================================================================
 void loop() {
-    server.handleClient();     //handle client request
+    server.handleClient();     // handle client request
 }
