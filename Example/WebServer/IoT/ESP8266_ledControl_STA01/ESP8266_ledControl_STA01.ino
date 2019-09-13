@@ -3,7 +3,7 @@
 #include <ESP8266WebServer.h>
 
 #include "index.h"          // web page
-#define LED  2              // Blue LED pin define(==D4)
+#define LED  ㅇ4            // Blue LED pin define(==D4)
 String LED_state = "OFF";   // LED_state를 문자열 변수로 정의
 
 // SSID and Password of your WiFi router
