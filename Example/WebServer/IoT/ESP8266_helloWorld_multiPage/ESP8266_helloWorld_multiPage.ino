@@ -30,7 +30,7 @@ void handlePage3()
     server.send(200, "text/html", htmlPage3);
 }
 
-void setup(void) 
+void setup() 
 {
     Serial.begin(115200);
     WiFi.begin(ssid, password);
@@ -56,7 +56,7 @@ void setup(void)
     Serial.println("HTTP server started");
 }
 
-void loop(void) 
+void loop() 
 {
     server.handleClient();
 }
