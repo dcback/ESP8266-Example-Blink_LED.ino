@@ -1,12 +1,9 @@
 const char MAIN_page[] PROGMEM = R"=====(
 <!DOCTYPE html>
 <html>
-
 <body>
-
     <h2>Input Type Text, Password<h2>
             <h3> HTML Form ESP8266</h3>
-
             <form action="/form" method="post">
                 User name:</br>
                 <input type="text" name="username" value=""></br>
@@ -18,8 +15,6 @@ const char MAIN_page[] PROGMEM = R"=====(
                 <p>Username = @@username@@</p>
                 <p>Password = @@psw@@</p>
             </div>
-
 </body>
-
 </html>
 )=====";
