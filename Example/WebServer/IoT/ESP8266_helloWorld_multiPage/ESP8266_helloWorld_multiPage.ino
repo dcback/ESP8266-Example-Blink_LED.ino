@@ -13,7 +13,8 @@ const char *password = "1700note"; // "your password"
 
 ESP8266WebServer server(80);
 
-void handleRoot() {
+void handleRoot() 
+{
     Serial.println("GET /");
     server.send(200, "text/html", htmlPage1);
 }
@@ -23,18 +24,21 @@ void handlePage2() {
     server.send(200, "text/html", htmlPage2);
 }
 
-void handlePage3() {
+void handlePage3() 
+{
     Serial.println("GET /page3");
     server.send(200, "text/html", htmlPage3);
 }
 
-void setup(void) {
+void setup(void) 
+{
     Serial.begin(115200);
     WiFi.begin(ssid, password);
     Serial.println("");
 
     // Wait for connection
-    while (WiFi.status() != WL_CONNECTED) {
+    while (WiFi.status() != WL_CONNECTED) 
+    {
         delay(500);
         Serial.print(".");
     }
@@ -52,6 +56,7 @@ void setup(void) {
     Serial.println("HTTP server started");
 }
 
-void loop(void) {
+void loop(void) 
+{
     server.handleClient();
 }
