@@ -4,7 +4,7 @@
 
 #include "index.h"      // web page
 
-//SSID and Password of your WiFi router
+// SSID and Password of your WiFi router
 const char *ssid = "Backhomenet";  // "your_ssid"
 const char *password = "1700note"; // "your password"
 
