@@ -22,7 +22,7 @@ void handleRoot()
 {
     String s = MAIN_page;
 
-    Temp = 25;
+    Temp = random(20, 30);
 
     s.replace("@@L1@@", L1Status);
     s.replace("@@L2@@", L2Status);
