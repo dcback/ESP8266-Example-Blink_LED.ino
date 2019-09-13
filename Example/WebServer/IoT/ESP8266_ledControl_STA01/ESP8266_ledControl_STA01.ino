@@ -2,11 +2,11 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 
-#include "index.h"      // web page
-#define LED  2          // Blue LED pin define(==D4)
-String LED_state = "OFF";
+#include "index.h"          // web page
+#define LED  2              // Blue LED pin define(==D4)
+String LED_state = "OFF";   // LED_state를 문자열 변수로 정의
 
-//SSID and Password of your WiFi router
+// SSID and Password of your WiFi router
 const char *ssid = "Backhomenet";
 const char *password = "1700note";
 
@@ -14,7 +14,8 @@ ESP8266WebServer server(80);        // Server on port 80
 //===================================================================
 // This routine is executed when you open its IP in browser
 //===================================================================
-void handleRoot() {
+void handleRoot() 
+{
     String s = MAIN_page;
 
     // LED_state문자열을 HTML의 @@status@@ 변수로 바꾼다
@@ -24,29 +25,34 @@ void handleRoot() {
 //=====================================================================
 // This rutine is exicuted when we press ON/OFF button i.e. form
 //=====================================================================
-void handleForm() {
-    String s = server.arg("button");    //Get button state
+void handleForm() 
+{
+    String s = server.arg("button");    // Get button state
     if (s == "ON") {
-        digitalWrite(LED, LOW);         //Turn LED on (LED is in reverse connection)
-        LED_state = "ON";               //Change status to ON
+        digitalWrite(LED, LOW);         // Turn LED on (LED is in reverse connection)
+        LED_state = "ON";               // Change status to ON
     }
-    if (s == "OFF") {
-            digitalWrite(LED, HIGH);    //Turn LED off (LED is in reverse connection)
-        LED_state = "OFF";              //Change status to OFF
+    
+    if (s == "OFF") 
+    {
+        digitalWrite(LED, HIGH);        // Turn LED off (LED is in reverse connection)
+        LED_state = "OFF";              // Change status to OFF
     }
 
-    server.sendHeader("Location", "/"); //Send web browser to root location
-    server.send(302, "text/html", "");  //Send browser 302 redirect go back to root location
+    server.sendHeader("Location", "/"); // Send web browser to root location
+    server.send(302, "text/html", "");  // Send browser 302 redirect go back to root location
 }
 //=================================================================
 //                    Power on setup
 //===================================================================
-void setup() {
+void setup() 
+{
     Serial.begin(115200);
     WiFi.begin(ssid, password);    //Connect to your WiFi router
 
     // Wait for connection
-    while (WiFi.status() != WL_CONNECTED) {
+    while (WiFi.status() != WL_CONNECTED) 
+    {
         delay(500);
         Serial.print(".");
     }
@@ -70,6 +76,7 @@ void setup() {
 //===================================================================
 //                        Main Program Loop
 //===================================================================
-void loop() {
+void loop() 
+{
     server.handleClient();     //handle client request
 }
