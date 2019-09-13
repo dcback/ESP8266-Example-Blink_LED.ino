@@ -4,7 +4,7 @@
 
 #include "index.h" // web page
 
-//SSID and Password of your WiFi router
+// SSID and Password of your WiFi router
 const char *ssid = "Backhomenet";
 const char *password = "1700note";
 
@@ -12,22 +12,25 @@ ESP8266WebServer server(80); // Server on port 80
 //=======================================================================
 // handles main page
 //=======================================================================
-void handleRoot() {
+void handleRoot() 
+{
     String s = MAIN_page;
     
     int analog = random(0, 1024); // 0 에서 1023 사이 임의 값 출력             
     
-    s.replace("@@value@@", String(analog)); //Update it in HTML Code
+    s.replace("@@value@@", String(analog)); // Update it in HTML Code
     server.send(200, "text/html", s);
 }
 
-void setup() {
+void setup() 
+{
     Serial.begin(115200);
     WiFi.begin(ssid, password);
     Serial.println("");
 
     // Wait for connection
-    while (WiFi.status() != WL_CONNECTED) {
+    while (WiFi.status() != WL_CONNECTED) 
+    {
         delay(500);
         Serial.print(".");
     }
@@ -44,6 +47,7 @@ void setup() {
     Serial.println("HTTP server started");
 }
 
-void loop(){
+void loop()
+{
     server.handleClient();
 }
