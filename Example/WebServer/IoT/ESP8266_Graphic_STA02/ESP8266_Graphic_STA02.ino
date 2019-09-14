@@ -18,7 +18,7 @@ void handleRoot()
 
     int temp = random(0, 100);   // 0 에서 99 사이 임의 값 출력
     int humi = random(0, 100);   // 0 에서 99 사이 임의 값 출력
-    int bright = random(0, 100);   // 0 에서 99 사이 임의 값 출력
+    int bright = random(0, 100); // 0 에서 99 사이 임의 값 출력
 
     //Update it in HTML Code
     s.replace("@@temp@@", String(temp));
