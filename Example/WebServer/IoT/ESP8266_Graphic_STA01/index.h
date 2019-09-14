@@ -34,8 +34,7 @@ const char MAIN_page[] PROGMEM = R"=====(
     <center>
         <h2>google.visualization.Gauge</h2>
         <div id="chart_div" style="width:200px; height: 200px;"></div>
-        <h5>Designed by ORY (C) 2019 <a
-                href="https://github.com/dcback/ESP8266/tree/master/Example/WebServer/IoT/ESP8266_Graphic_STA01">GithubLink.</a>
+        <h5>Designed by ORY (C) 2019 <a href="https://github.com/dcback/ESP8266/tree/master/Example/WebServer/IoT/ESP8266_Graphic_STA01">GithubLink.</a>
         </h5>
     </center>
 </body>
