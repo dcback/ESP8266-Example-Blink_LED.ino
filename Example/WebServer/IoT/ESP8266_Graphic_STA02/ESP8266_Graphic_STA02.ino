@@ -12,7 +12,8 @@ ESP8266WebServer server(80); // Server on port 80
 //=======================================================================
 // handles main page
 //=======================================================================
-void handleRoot() {
+void handleRoot() 
+{
     String s = MAIN_page;
 
     int temp = random(0, 100);   // 0 에서 99 사이 임의 값 출력
@@ -27,13 +28,15 @@ void handleRoot() {
     server.send(200, "text/html", s);
 }
 
-void setup() {
+void setup() 
+{
     Serial.begin(115200);
     WiFi.begin(ssid, password);
     Serial.println("");
 
     // Wait for connection
-    while (WiFi.status() != WL_CONNECTED) {
+    while (WiFi.status() != WL_CONNECTED) 
+    {
         delay(500);
         Serial.print(".");
     }
@@ -50,6 +53,7 @@ void setup() {
     Serial.println("HTTP server started");
 }
 
-void loop() {
+void loop() 
+{
     server.handleClient();
 }
