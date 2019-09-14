@@ -18,7 +18,7 @@ void handleRoot()
     
     int analog = random(0, 1024); // 0 에서 1023 사이 임의 값 출력             
     
-    s.replace("@@value@@", String(analog)); // Update it in HTML Code
+    s.replace("@@value@@", String(analog)); //Update it in HTML Code
     server.send(200, "text/html", s);
 }
 
